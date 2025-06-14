@@ -1,0 +1,20 @@
+name: WakaTime status update
+
+on:
+  schedule:
+    - cron: "1 0 * * *"  # 毎日午前0:01 (UTC)
+  push:
+    branches: [main]  # 自分のブランチが master なら master に変更
+
+jobs:
+  update-readme:
+    name: Update the WakaTime Stat
+    runs-on: ubuntu-latest
+    steps:
+      - uses: avinal/Profile-Readme-WakaTime@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+          BRANCH: "main"  # または master
+          COMMIT_MSG: "Automated Coding Activity Update :alien:"
+          STATS_RANGE: "last_7_days"
