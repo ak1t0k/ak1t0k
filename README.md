@@ -1,5 +1,4 @@
 ## Hi there 👋
-## 🧾 GitHub Summary Card
 ![GitHub Profile Summary Card](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ak1t0k&theme=ayu_mirage)
 
 <img
